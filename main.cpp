@@ -90,7 +90,6 @@ public:
                 c = msg[index];
             }
         }
-        int x= 0;
     }
 
     char peek(char ( &msg )[]){
