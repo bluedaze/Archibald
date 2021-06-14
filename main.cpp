@@ -49,6 +49,9 @@ public:
             else if(stack[index] == ";"){
                 index++;
             }
+            else{
+                std::cout << "Invalid input. Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'";
+            }
         }
     }
 
