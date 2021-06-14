@@ -10,19 +10,21 @@ public:
     std::string stack[80];
     Tokenizer(char ( &msg )[]) {
         getTokens(msg);
-        logger();
+//        logger();
         parseTokens();
     }
 
     void engineFuncs(int frame){
         if (stack[frame] == "start"){
             startEngine();
+            index++;
         }
     }
 
     void uwbFuncs(int frame){
         if (stack[frame] == "start"){
             startUWB();
+            index++;
         }
     }
 
@@ -37,7 +39,8 @@ public:
     void parseTokens(){
         std::string part;
         index = 0;
-        while(index < sizeof(stack)){
+        while(index < count){
+            std::string butts = stack[index];
             if(stack[index] == "engine"){
                 index++;
                 engineFuncs(index);
@@ -51,6 +54,8 @@ public:
             }
             else{
                 std::cout << "Invalid input. Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'";
+                index++;
+                break;
             }
         }
     }
@@ -90,6 +95,7 @@ public:
                 c = msg[index];
             }
         }
+        int x= 0;
     }
 
     char peek(char ( &msg )[]){
@@ -107,7 +113,7 @@ public:
 };
 
 int main() {
-    char testString[] = "engine   start";
+    char testString[] = "engine    start";
     Tokenizer toks(testString);
     return 0;
 }
