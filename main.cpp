@@ -1,8 +1,10 @@
 #include <Wire.h>
 int GREEN = 2;
 int RED = 3;
-int E1 = 5;     // M1 Speed Control
-int M1 = 4;    // M1 Direction Control
+int E1 = 5;     //M1 Speed Control
+int E2 = 6;     //M2 Speed Control
+int M1 = 4;    //M1 Direction Control
+int M2 = 7;    //M1 Direction Control
 char messageBuffer[80];
 struct stackdef {
     String tokens[80];
@@ -26,17 +28,40 @@ class Parser {
     void startEngine(char a) {
         Serial.println("Starting engine");
         analogWrite(E1, a);  //  PWM Speed Control
+        analogWrite(E2, a);  //  PWM Speed Control
         digitalWrite(M1, HIGH);
+        digitalWrite(M2, HIGH);
+    }
+
+    void turnRight (char a, char b)             //Turn Right
+    {
+        analogWrite (E1, a);
+        digitalWrite(M1, HIGH);
+        analogWrite (E2, b);
+        digitalWrite(M2, LOW);
+    }
+
+    void turnLeft (char a, char b)             //Turn Right
+    {
+        analogWrite (E1, a);
+        digitalWrite(M1, LOW);
+        analogWrite (E2, b);
+        digitalWrite(M2, HIGH);
     }
 
     void stopEngine(void) {
         Serial.println("Stopping Engine");
         digitalWrite(E1, LOW);
+        digitalWrite(E2, LOW);
     }
 
     void uwbFuncs() {
         if (msg.tokens[index] == "start") {
             startUWB();
+            index++;
+        }
+        else if (msg.tokens[index] == "stop") {
+            stopUWB();
             index++;
         }
     }
@@ -45,12 +70,34 @@ class Parser {
         Serial.println("Starting Ultra Wide Band...");
     }
 
+    void stopUWB() {
+        Serial.println("Stopping Ultra Wide Band...");
+    }
+
+    
+    void reverse (char a, char b)          //Move backward
+    {
+      analogWrite (E1, a);
+      digitalWrite(M1, LOW);
+      analogWrite (E2, b);
+      digitalWrite(M2, LOW);
+    }
+
     void engineFuncs() {
         if (msg.tokens[index] == "start") {
             startEngine(255);
             index++;
         } else if (msg.tokens[index] == "stop") {
             stopEngine();
+            index++;
+        } else if (msg.tokens[index] == "right"){
+            turnRight(250, 250);
+            index++;
+        } else if(msg.tokens[index] == "reverse"){
+            reverse(250, 250);
+            index++;
+        } else if(msg.tokens[index] == "left"){
+            turnLeft(250, 250);
             index++;
         }
     }
@@ -66,7 +113,7 @@ class Parser {
             } else if (msg.tokens[index] == ";") {
                 index++;
             } else {
-                Serial.println("Invalid input."
+                Serial.println("Invalid input. "
                 "Commands are written in a noun verb structure."
                 "ie noun: 'engine' verb: 'start'");
                 index++;
@@ -135,7 +182,7 @@ class Tokenizer {
 void receiveEvent(int howMany) {
     byte index = 0;
 
-    while  (Wire.available() && (index < 80))  //  Make sure that only a max of 8 bytes are read {
+    while  (Wire.available() && (index < 80)){  //  Make sure that only a max of 8 bytes are read {
         messageBuffer[index++] = Wire.read();  //  Read one byte to index and increment (++) index
     }
     Tokenizer tokens(messageBuffer);
