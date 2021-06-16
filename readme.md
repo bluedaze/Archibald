@@ -5,7 +5,7 @@
   
 ## Parts Used  
 
-<img align="right" heigh="310" width="232" src="https://i.imgur.com/iFnLEYq.jpg">
+<img align="left" height="310" width="232" src="https://i.imgur.com/iFnLEYq.jpg">
 
 Part | Link
 ------------ | -------------
