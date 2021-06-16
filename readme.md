@@ -1,6 +1,6 @@
 ![Alt Text](https://i.imgur.com/oFvHeAo.png)
 
-## This parser was written by Sean Pedigo for the JPL internship. This is an easily extensible parser which sends signals over i2c.  
+### This parser was written by Sean Pedigo for the JPL internship. This is an easily extensible parser which sends signals over i2c.  
   
 ## Parts Used  
 
@@ -24,9 +24,9 @@ engine | left | turns left
 engine | right | turns right  
 engine | reverse | reverses engines  
 
-## Future Plans
-#### Right now we are working with the Jetson Nano, ROS, and LORA.
-#### Coding incoming, ETA Unknown.
+## In Development
+##### Developers are working to extend the robot with the Jetson Nano, ROS, and LORA.
+##### Coding incoming, ETA Unknown.
 
 Part | Link
 ------------ | -------------
