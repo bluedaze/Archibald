@@ -6,7 +6,7 @@
 ## Parts Used  
 
 <img align="left" width="232" height="310" src="https://i.imgur.com/iFnLEYq.jpg">
-
+<br/>
 Part | Link
 ------------ | -------------
 Arduino Nano 33 BLE | https://bit.ly/3cN2Wfv  
