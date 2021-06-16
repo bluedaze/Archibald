@@ -1,7 +1,3 @@
-
-
-https://user-images.githubusercontent.com/35676690/122307989-702aa480-ced9-11eb-89ac-9a5e9215ba48.mp4
-
 ![Alt Text](https://i.imgur.com/oFvHeAo.png)
 
 ### This parser was written by Sean Pedigo for the JPL internship.  
@@ -48,3 +44,6 @@ Jetson Nano | https://www.seeedstudio.com/NVIDIA-Jetson-Nano-Development-Kit-B01
 
 ## DEMO
 https://www.youtube.com/watch?v=QDIc7w09_gA
+
+
+https://user-images.githubusercontent.com/35676690/122307989-702aa480-ced9-11eb-89ac-9a5e9215ba48.mp4
