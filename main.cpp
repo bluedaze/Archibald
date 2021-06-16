@@ -182,7 +182,7 @@ class Tokenizer {
 void receiveEvent(int howMany) {
     byte index = 0;
 
-    while  (Wire.available() && (index < 80)){  //  Make sure that only a max of 8 bytes are read {
+    while  (Wire.available() && (index < 80)){  //  Make sure that only a max of 80 bytes are read {
         messageBuffer[index++] = Wire.read();  //  Read one byte to index and increment (++) index
     }
     Tokenizer tokens(messageBuffer);
