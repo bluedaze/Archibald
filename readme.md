@@ -1,12 +1,16 @@
 This parser was written by Sean Pedigo for the JPL internship. This is an easily extensible parser which sends signals over i2c.  
   
 The following parts were used:  
+
+Part | Link
 ------------ | -------------
-First Header | Second Header
 Arduino Nano 33 BLE | https://store.arduino.cc/usa/nano-33-ble  
 Romeo V2 - a Robot Control Board with Motor Driver | https://www.dfrobot.com/product-844.html  
 JGA25-371 Geared Motor with Encoder | https://www.seeedstudio.com/JGA25-371-Geared-Motor-with-Encoder-p-4125.html  
 Devastator Tank Mobile Robot Platform | https://www.dfrobot.com/product-1477.html  
+
+
+
 
 There are currently plans to extend our robot further using lora radios.  
 
