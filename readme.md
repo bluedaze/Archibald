@@ -22,8 +22,8 @@ engine right | right
 engine reverse | reverse
 
 ## Future Plans
-### Right now we are working with the Jetson Nano, ROS, and LORA.
-### Coding incoming, ETA Unknown.
+#### Right now we are working with the Jetson Nano, ROS, and LORA.
+#### Coding incoming, ETA Unknown.
 
 Part | Link
 ------------ | -------------
