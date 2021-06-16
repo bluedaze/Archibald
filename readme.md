@@ -1,4 +1,4 @@
-![Alt Text](https://i.imgur.com/oFvHeAo.png)
+![Alt Text](https://i.imgur.com/nLAwD98.png)
 
 ### This parser was written by Sean Pedigo for the JPL internship.  
 ##### This is an easily extensible parser which sends signals over i2c.  
