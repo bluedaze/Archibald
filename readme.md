@@ -2,7 +2,7 @@
 
 ## This parser was written by Sean Pedigo for the JPL internship. This is an easily extensible parser which sends signals over i2c.  
   
-## The following parts were used:  
+## Parts Used  
 
 Part | Link
 ------------ | -------------
@@ -11,7 +11,8 @@ Romeo V2 - a Robot Control Board with Motor Driver | https://www.dfrobot.com/pro
 JGA25-371 Geared Motor with Encoder | https://www.seeedstudio.com/JGA25-371-Geared-Motor-with-Encoder-p-4125.html  
 Devastator Tank Mobile Robot Platform | https://www.dfrobot.com/product-1477.html  
 
-## Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'.  
+## Commands 
+##### are written in a noun verb structure. ie noun: 'engine' verb: 'start'.  
 <img align="right" width="370" height="200" src="https://i.imgur.com/BXurcEi.jpg">
 
 
