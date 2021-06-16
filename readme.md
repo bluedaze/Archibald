@@ -41,3 +41,6 @@ Part | Link
 ------------ | -------------
 2.4G WIRELESS MODULE NRF24L01+PA | https://www.seeedstudio.com/2-4G-WIRELESS-MODULE-NRF24L01-PA.html
 Jetson Nano | https://www.seeedstudio.com/NVIDIA-Jetson-Nano-Development-Kit-B01-p-4437.html
+
+## DEMO
+https://www.youtube.com/watch?v=QDIc7w09_gA
