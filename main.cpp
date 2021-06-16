@@ -1,119 +1,156 @@
-#include <iostream>
-#include <string.h>
+#include <Wire.h>
+int GREEN = 2;
+int RED = 3;
+int E1 = 5;     // M1 Speed Control
+int M1 = 4;    // M1 Direction Control
+char messageBuffer[80];
+struct stackdef {
+    String tokens[80];
+};
 
-class Tokenizer {
-    private:
+
+
+class Parser {
+  public:
+    int tokens;
+    stackdef msg;
     int index = 0;
-    int count = 0;
 
-public:
-    std::string stack[80];
-    Tokenizer(char ( &msg )[]) {
-        getTokens(msg);
-//        logger();
+    Parser(stackdef &msg, int tokens) {
+        this-> msg = msg;
+        this-> tokens = tokens;
         parseTokens();
     }
 
-    void engineFuncs(int frame){
-        if (stack[frame] == "start"){
-            startEngine();
-            index++;
-        }
+
+    void startEngine(char a) {
+        Serial.println("Starting engine");
+        analogWrite(E1, a);  //  PWM Speed Control
+        digitalWrite(M1, HIGH);
     }
 
-    void uwbFuncs(int frame){
-        if (stack[frame] == "start"){
+    void stopEngine(void) {
+        Serial.println("Stopping Engine");
+        digitalWrite(E1, LOW);
+    }
+
+    void uwbFuncs() {
+        if (msg.tokens[index] == "start") {
             startUWB();
             index++;
         }
     }
 
-    void startEngine(){
-        std::cout << "Starting Engine..." << std::endl;
+    void startUWB() {
+        Serial.println("Starting Ultra Wide Band...");
     }
 
-    void startUWB(){
-        std::cout << "Starting Ultra Wide Band..." << std::endl;
+    void engineFuncs() {
+        if (msg.tokens[index] == "start") {
+            startEngine(255);
+            index++;
+        } else if (msg.tokens[index] == "stop") {
+            stopEngine();
+            index++;
+        }
     }
 
-    void parseTokens(){
-        std::string part;
-        index = 0;
-        while(index < count){
-            std::string butts = stack[index];
-            if(stack[index] == "engine"){
+    void parseTokens() {
+        while (index < tokens) {
+            if (msg.tokens[index] == "engine") {
                 index++;
-                engineFuncs(index);
-            }
-            else if(stack[index] == "engine"){
+                engineFuncs();
+            } else if (msg.tokens[index] == "uwb") {
                 index++;
-                uwbFuncs(index);
-            }
-            else if(stack[index] == ";"){
+                uwbFuncs();
+            } else if (msg.tokens[index] == ";") {
                 index++;
-            }
-            else{
-                std::cout << "Invalid input. Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'";
+            } else {
+                Serial.println("Invalid input."
+                "Commands are written in a noun verb structure."
+                "ie noun: 'engine' verb: 'start'");
                 index++;
                 break;
             }
         }
     }
+};
 
-    void logger(){
-        std::cout << "Stack: " << std::endl;
-        for (int i = 0; i < count; i++)
-            std::cout << stack[i] << std::endl;
+
+class Tokenizer {
+  public:
+    int index = 0;
+    int count = 0;
+
+    stackdef message;
+    char* msg;
+
+    Tokenizer(char msg[]) {
+        this -> msg = msg;
+        getTokens();
     }
 
-    void addToStack(std::string ( &str )){
-        stack[count] = str;
+    void addToStack(String &str) {
+        message.tokens[index] = str;
         index++;
         count++;
-        str.clear();
+        str = "";
     }
 
-    void advance(std::string ( &str ), char ( &c )){
+    void advance(String &str, char c ) {
         str+= c;
-        index++;
+        count++;
     }
 
-    void getTokens(char ( &msg )[]){
-        std::string str;
-        char c = msg[index];
-        while(index < strlen(msg) +1) {
+    void getTokens() {
+        String str = "";
+        char c = msg[count];
+        while (count < strlen(msg) +1) {
             if (isspace(c)) {
-                skipWhitespace(msg);
+                skipWhitespace();
                 addToStack(str);
-                c = msg[index];
-            }
-            else if(c == '\0') {
+                c = msg[count];
+            } else if (c == '\0') {
                 addToStack(str);
-            }
-            else {
+            } else {
                 advance(str, c);
-                c = msg[index];
+                c = msg[count];
             }
         }
-        int x= 0;
     }
 
-    char peek(char ( &msg )[]){
-        char peekValue = msg[index+1];
+    char peek() {
+        char peekValue = msg[count+1];
         return peekValue;
     }
 
-    void skipWhitespace(char ( &msg )[]){
-        while(isspace(peek(msg))) {
-            index++;
+    void skipWhitespace() {
+        while (isspace(peek())) {
+            count++;
         }
     }
-
-
 };
 
-int main() {
-    char testString[] = "engine    start";
-    Tokenizer toks(testString);
-    return 0;
+
+void receiveEvent(int howMany) {
+    byte index = 0;
+
+    while  (Wire.available() && (index < 80))  //  Make sure that only a max of 8 bytes are read {
+        messageBuffer[index++] = Wire.read();  //  Read one byte to index and increment (++) index
+    }
+    Tokenizer tokens(messageBuffer);
+    Parser parser(tokens.message, tokens.index);
+    memset(messageBuffer, 0, sizeof(messageBuffer));
 }
+
+
+
+void setup() {
+    Serial.begin(115200);
+    Wire.begin(9);
+    Wire.onReceive(receiveEvent);
+}
+
+void loop() {
+  }
+  
