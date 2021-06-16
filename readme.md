@@ -17,10 +17,7 @@ engine left | left
 engine right | right
 engine reverse | reverse
 
-There are currently plans to extend our robot further with a variety of parts, however the immediate future involve installing and using ROS on a jetson nano 
-
-and using lora radios.
-
+There are currently plans to extend our robot further with a variety of parts, however the immediate future involve installing and using ROS on a jetson nano and using lora radios.
 
 Part | Link
 ------------ | -------------
