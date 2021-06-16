@@ -12,7 +12,7 @@ JGA25-371 Geared Motor with Encoder | https://www.seeedstudio.com/JGA25-371-Gear
 Devastator Tank Mobile Robot Platform | https://www.dfrobot.com/product-1477.html  
 
 ## Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'.  
-
+<img align="right" width="100" height="100" src="https://i.imgur.com/BXurcEi.jpg">
 Noun | Verb | Result
 ------------ | ------------- | -------------
 engine | start | starts accelerating forward  
