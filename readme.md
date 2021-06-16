@@ -13,13 +13,13 @@ Devastator Tank Mobile Robot Platform | https://www.dfrobot.com/product-1477.htm
 
 ## Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'.  
 
-Command | Result
+Noun | Verb | Result
 ------------ | -------------
-engine start | start
-engine stop | stop
-engine left | left
-engine right | right
-engine reverse | reverse
+engine | start | starts accelerating forward
+engine | stop | stops moving
+engine | left | turns left
+engine | right | turns right
+engine | reverse | reverses engines
 
 ## Future Plans
 #### Right now we are working with the Jetson Nano, ROS, and LORA.
