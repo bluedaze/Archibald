@@ -19,3 +19,12 @@ The part we have started working with for this is the following:
 
 Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'.  
 
+
+
+Command | Result
+------------ | -------------
+engine start | start
+engine stop | stop
+engine left | left
+engine right | right
+engine reverse | reverse
