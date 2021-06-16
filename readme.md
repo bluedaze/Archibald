@@ -9,10 +9,10 @@
 
 Part | Link
 ------------ | -------------
-Arduino Nano 33 BLE | https://store.arduino.cc/usa/nano-33-ble  
-Romeo V2 - a Robot Control Board with Motor Driver | https://www.dfrobot.com/product-844.html  
-JGA25-371 Geared Motor with Encoder | https://www.seeedstudio.com/JGA25-371-Geared-Motor-with-Encoder-p-4125.html  
-Devastator Tank Mobile Robot Platform | https://www.dfrobot.com/product-1477.html  
+Arduino Nano 33 BLE | https://bit.ly/3cN2Wfv  
+Romeo V2 - a Robot Control Board with Motor Driver | https://bit.ly/35sbV1J  
+JGA25-371 Geared Motor with Encoder | https://bit.ly/3xoWjbe  
+Devastator Tank Mobile Robot Platform | https://bit.ly/3pZtqzQ  
 
 ## Commands 
 ##### Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'.  
