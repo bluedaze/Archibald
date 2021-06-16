@@ -17,7 +17,7 @@ Devastator Tank Mobile Robot Platform | https://bit.ly/3pZtqzQ
 ## Commands 
 ##### Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'.
 
-<img align="right" height="303" width="180" src="https://i.imgur.com/ImjASxp.png">
+<img align="right" height="108" width="244" src="https://i.imgur.com/ImjASxp.png">
 
 Noun | Verb | Result
 ------------ | ------------- | -------------
