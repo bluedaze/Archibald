@@ -15,11 +15,11 @@ Devastator Tank Mobile Robot Platform | https://www.dfrobot.com/product-1477.htm
 
 Noun | Verb | Result
 ------------ | -------------
-engine | start | starts accelerating forward
-engine | stop | stops moving
-engine | left | turns left
-engine | right | turns right
-engine | reverse | reverses engines
+engine | start | starts accelerating forward  
+engine | stop | stops moving  
+engine | left | turns left  
+engine | right | turns right  
+engine | reverse | reverses engines  
 
 ## Future Plans
 #### Right now we are working with the Jetson Nano, ROS, and LORA.
