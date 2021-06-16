@@ -5,7 +5,7 @@
   
 ## Parts Used  
 
-<img align="left" width="310" height="232" src="https://i.imgur.com/iFnLEYq.jpg">
+<img align="left" width="107" height="107" src="https://i.imgur.com/iFnLEYq.jpg">
 
 Part | Link
 ------------ | -------------
@@ -19,7 +19,7 @@ Devastator Tank Mobile Robot Platform | https://bit.ly/3pZtqzQ
 ## Commands 
 ##### Commands are written in a noun verb structure. ie noun: 'engine' verb: 'start'.
 
-<img align="right" height="107" width="244" src="https://i.imgur.com/ImjASxp.png">
+<img align="right" height="107" width="107" src="https://i.imgur.com/ImjASxp.png">
 
 Noun | Verb | Result
 ------------ | ------------- | -------------
