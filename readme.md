@@ -35,7 +35,7 @@ engine | reverse | reverses engines
 
 ## In Development
 ##### Developers are working to extend the robot with the Jetson Nano, ROS, and LORA.
-##### Coding incoming, ETA Unknown.
+##### Code incoming, ETA Unknown.
 
 Part | Link
 ------------ | -------------
