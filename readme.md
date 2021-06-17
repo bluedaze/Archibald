@@ -1,5 +1,5 @@
                                    
-## A̲d̲v̲a̲n̲c̲e̲d̲ S̲y̲s̲t̲e̲m̲s̲ G̲r̲o̲u̲p̲
+## α∂ναη¢є∂ ѕуѕтємѕ gяσυρ
           
 ### This parser was written by Sean Pedigo for the JPL internship.  
 ##### This is an easily extensible parser which sends signals over i2c.  
