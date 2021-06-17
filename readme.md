@@ -1,5 +1,5 @@
                                    
-# Ä̤̈d̤̈̈v̤̈̈ä̤̈n̤̈̈c̤̈̈ë̤̈d̤̈̈ S̤̈̈ÿ̤̈s̤̈̈ẗ̤̈ë̤̈m̤̈̈s̤̈̈ G̤̈̈r̤̈̈ö̤̈ṳ̈̈p̤̈̈ P̤̈̈r̤̈̈ö̤̈j̤̈̈ë̤̈c̤̈̈ẗ̤̈
+# ᴀᴅᴠᴀɴᴄᴇᴅ sʏsᴛᴇᴍs ɢʀᴏᴜᴘ ᴘʀᴏᴊᴇᴄᴛ
           
 ### This parser was written by Sean Pedigo for the JPL internship.  
 ##### This is an easily extensible parser which receives signals over i2c.  
