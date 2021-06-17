@@ -1,15 +1,5 @@
                                    
-     _____   _                       _ 
-    |  _  |_| |_ _ ___ ___ ___ ___ _| |
-    |     | . | | | .'|   |  _| -_| . |
-    |__|__|___|\_/|__,|_|_|___|___|___|
-                                   
-                                                          
-     _____         _                    _____                 
-    |   __|_ _ ___| |_ ___ _____ ___   |   __|___ ___ _ _ ___ 
-    |__   | | |_ -|  _| -_|     |_ -|  |  |  |  _| . | | | . |
-    |_____|_  |___|_| |___|_|_|_|___|  |_____|_| |___|___|  _|
-          |___|                                          |_|  
+A̲d̲v̲a̲n̲c̲e̲d̲ S̲y̲s̲t̲e̲m̲s̲ G̲r̲o̲u̲p̲
           
 ### This parser was written by Sean Pedigo for the JPL internship.  
 ##### This is an easily extensible parser which sends signals over i2c.  
