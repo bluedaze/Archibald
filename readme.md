@@ -6,7 +6,7 @@
 
 This project involves interprocess communication using i2c. The parent module ( an Arduino 33 BLE) sends messages to a child module ( The Romeo v2 ) over i2c. The child module then tokenizes all of the words, and then the parser calls functions based upon relevent keywords. 
 
-This parser is very similar to how a context free grammer specification would work in BNF. With this in mind, further development could allow one to start extending the parser to write a domain specific programming language which would allow a programmer to create algorithms that could be sent over the serial interface, stored in flash memory and executed later.
+This parser is very similar to how a context free grammar specification would work in BNF. With this in mind, further development could allow one to start extending the parser to write a domain specific programming language which would allow a programmer to create algorithms that could be sent over the serial interface, stored in flash memory and executed later.
   
 ## Parts Used  
 
