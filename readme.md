@@ -65,6 +65,6 @@ I was attempting a modular approach which became increasingly difficult as heade
 
 I added a radio and a controller to the project.
 
-The receiver for the radio is here: https://github.com/bluedaze/Mortimer-Receiver
-The transceiver for the radio is here: https://github.com/bluedaze/Lennard-Dispatch
-The code for the controller is here: https://github.com/bluedaze/Roscoe-Input
+The receiver for the radio is here: https://github.com/bluedaze/Mortimer-Receiver  
+The transceiver for the radio is here: https://github.com/bluedaze/Lennard-Dispatch  
+The code for the controller is here: https://github.com/bluedaze/Roscoe-Input  
