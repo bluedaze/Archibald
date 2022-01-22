@@ -60,3 +60,11 @@ https://www.youtube.com/watch?v=96I0G4uKvU4
 https://user-images.githubusercontent.com/35676690/150652650-5c2b606e-3f83-432c-b4bc-28c51e448029.mp4
 
 Sadly I lost access to this shortly after the person I was working with at the university was transferred to another department. He took it with him as the parts belonged to him so I was not able to continue with it.
+
+I was attempting a modular approach which became increasingly difficult as headers files made it very difficult to work with.
+
+I added a radio and a controller to the project.
+
+The receiver for the radio is here: https://github.com/bluedaze/Mortimer-Receiver
+The transceiver for the radio is here: https://github.com/bluedaze/Lennard-Dispatch
+The code for the controller is here: https://github.com/bluedaze/Roscoe-Input
