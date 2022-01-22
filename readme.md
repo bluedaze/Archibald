@@ -52,3 +52,11 @@ https://www.youtube.com/watch?v=QDIc7w09_gA
 
 
 https://user-images.githubusercontent.com/35676690/122307989-702aa480-ced9-11eb-89ac-9a5e9215ba48.mp4
+
+You can see it in operation here:
+
+https://www.youtube.com/watch?v=96I0G4uKvU4
+
+https://user-images.githubusercontent.com/35676690/150652650-5c2b606e-3f83-432c-b4bc-28c51e448029.mp4
+
+Sadly I lost access to this shortly after the person I was working with at the university was transferred to another department. He took it with him as the parts belonged to him so I was not able to continue with it.
